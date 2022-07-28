@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const  Flare= styled.span`
-    position: relative;
+    // position: relative;
     // object-position: 50% 50%;
     background: red;
     height: 20px;
@@ -32,6 +32,7 @@ export const  Flare= styled.span`
     box-shadow: 0px 0px 3px 3px rgba(255,0,0,.75);
     // filter: ${({ theme }) => {if (theme.name === "dark-theme"){return "invert(1)"}}}};
     transition: 2s;
+    animation-delay: calc(-0.5s * var(--k));
     animation: animate 1s alternate infinite;
 
     @keyframes animate {
@@ -48,11 +49,10 @@ export const  Flare= styled.span`
 `;
 
 export const World = styled.img`
-    filter: ${({ theme }) => {if (theme.name === "dark-theme"){return "invert(0)"} else {return "invert(1)"}}}};
+    filter: ${({ theme }) => {if (theme.name === "dark-theme"){return "invert(0)"} else {return "invert(1)"}}}});
     transition: 2s;
     width: 100%;
 height: 100%;
 object-fit: cover;
 object-position: 0px 45%;
-
 `;
