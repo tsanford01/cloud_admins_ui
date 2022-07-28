@@ -5,6 +5,7 @@ import * as ROUTES from '../constants/routes';
 import Header from '../containers/header';
 import Map from '../containers/map';
 import Logos from '../components/logos';
+import Table from '../containers/tables';
 
 
 export default function Dashboard() {
@@ -21,12 +22,14 @@ export default function Dashboard() {
     };
 
     return (
-        <>
         <ThemeProvider theme={selectedTheme}>
             <Header hTheme={HandleThemeChange} />
-            {/* <Header sTheme={ selectedTheme } hTheme={HandleThemeChange} /> */}
+            <div style={{ display: "flex", flexWrap: "wrap"}}>
+            
             <Map />
+            <Table />
+            
+            </div>
         </ThemeProvider>
-        </>
     )
 };
