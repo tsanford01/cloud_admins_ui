@@ -43,25 +43,9 @@ export default function Map() {
     return (
             <Maps>
                 { place !== undefined ? place.map(locs => (
-                <Maps.Flare onClick={() => {console.log(locs); picChange()}} style={{ "--i": locs.lat, "--j": locs.lon, "--k": toDecimal(locs.lat) }}></Maps.Flare>
+                <Maps.Flare onClick={() => {console.log(locs);}} style={{ "--i": locs.lat, "--j": locs.lon, "--k": toDecimal(locs.lat) }}></Maps.Flare>
                 )) : null}
-                <Maps.World src={ pic } alt='world map'/>   
+                <Maps.World src={ World } alt='world map'/>   
             </Maps>
     )
 };
-
-
-// { healthFail !== undefined ? healthFail.map(items => (
-//     <Maps.Flare loc={flair(items.region)}></Maps.Flare>))
-//     : null}
-
-// healthFail = [
-//     {
-//         name:adsfg,
-//         region: "us-west-1"
-//     }, 
-//     {
-//         name:adsfg,
-//         region: sdfagojik
-//     }
-// ]

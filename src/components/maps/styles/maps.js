@@ -39,12 +39,12 @@ export const  Flare= styled.span`
         0% {
 
             // filter: hue-rotate(0deg);
-            transform: scale(1.25);
+            transform: scale(1);
 
         }
         100% {
             // filter: hue-rotate(360deg);
-            transform: scale(0.75);
+            transform: scale(0.5);
         }
 `;
 
